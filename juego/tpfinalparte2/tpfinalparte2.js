@@ -17,7 +17,7 @@ function preload() {
   imgVictoria = loadImage('data/victoria.jpeg');
   imgInicio = loadImage('data/inicio.jpeg');
   imgCreditos = loadImage('data/credits.jpeg');
-  imgInstrucciones = loadImage('data/instrucciones.jpeg');
+  imgInstrucciones = loadImage('data/fondo_bill.jpg');
   imgDipper = loadImage('data/caradipper.png');
 }
 
