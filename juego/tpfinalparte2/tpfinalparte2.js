@@ -13,7 +13,7 @@ let posicionesTexto = [];
 
 function preload() {
   soundFormats('mp3', 'ogg');
-  song = loadSound('data/musica.mp3');
+  song = loadSound('/data/musica.mp3');
   fondo = loadImage('data/fondo.jpeg');
   fuente1 = loadFont('data/fuente1.ttf');
   imgDerrota = loadImage('data/bill1.jpeg');
