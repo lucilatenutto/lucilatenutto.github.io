@@ -5,12 +5,15 @@
 let juego;
 let fondo;
 let imgDerrota, imgVictoria, imgInicio, imgCreditos, imgInstrucciones, imgDipper;
+let song;
 let fuente1;
 let texto = [];
 let reglas = [];
 let posicionesTexto = [];
 
 function preload() {
+  soundFormats('mp3', 'ogg');
+  song = loadSound('data/musica.mp3');
   fondo = loadImage('data/fondo.jpeg');
   fuente1 = loadFont('data/fuente1.ttf');
   imgDerrota = loadImage('data/bill1.jpeg');
@@ -38,6 +41,12 @@ function draw() {
 }
   
 function mousePressed() {
+  let botonX = width - 150;
+  let botonY = height - 60;
+  let botonAncho = 130;
+  let botonAlto = 40;
+  let diametro = dist (mouseX, mouseY, 610, 30);
+  let radio = 30 / 2;
 
   if (juego.estado === "inicial") {
     if (mouseX > width / 2 - 75 && mouseX < width / 2 + 75 && mouseY > height / 2 - 40 && mouseY < height / 2 + 10) {
@@ -60,10 +69,18 @@ function mousePressed() {
     if (mouseX > width - 150 && mouseX < width - 20 && mouseY > height - 60 && mouseY < height - 20) {
       juego = new Juego();
     }
+
   }
 
- 
+  if(diamentro < radio){
+    if(song.isPlaying){
+      song.pause();
+    }else{
+      song.play();
+    }
+    }
   }
+
 
    
 function listaTextos () {
