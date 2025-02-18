@@ -121,10 +121,5 @@ class Juego {
   mostrarBotonReiniciar(texto) {
     this.mostrarBoton(width - 150, height - 60, 130, 40, texto);
   }
-
-  mostrarBotonMusica(){
-    fill(255);
-    circle(610, 30, 30);
-  }
   
 }
